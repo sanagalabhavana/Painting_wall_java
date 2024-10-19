@@ -1,0 +1,77 @@
+we want to estimate the cost of painting a property interior wall painting cost is Rs.18 per sq.ft. and exterior wall painting cost is Rs.12nper sq.ft.
+Take input as
+1. No. of interior walls
+2.No. of Exterior wall
+3. Surface Area of each Interior(4) wall in units of square feed. Surface Area of each Exterior wall is units of square feet. If a user enter  zero at the no. of walls then skip Surface area value as user may don’t want to paint that wall. calculate and display the total cost of painting the property.
+Output :------
+6
+3
+12.3
+15.2
+12.3
+15.2
+12.3
+15.2
+10.10
+10.10
+10.100
+
+Total estimated cost: 1847.4 INR
+------------------------------------------------------------Java Code:-------------------------------------------------------------------------
+package java_programs;
+
+import java.util.Scanner;
+
+public class Display_total_cost_of_painting {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Interior wall painting cost : ");
+		double inter_cost=s.nextDouble();
+		System.out.println("Enter the Exterior wall painting cost : ");
+		double exter_cost=s.nextDouble();
+		System.out.println("Enter No. of interior walls :");
+		int n=s.nextInt();
+		System.out.println("Enter No. of Exterior walls :");
+		int m=s.nextInt();
+		double a[]=new double[n];
+		double b[]=new double[m];
+		for(int i=0;i<n;i++) {
+			a[i]=s.nextDouble();
+		}
+		for(int i=0;i<m;i++) {
+			b[i]=s.nextDouble();
+		}
+		float sum=0;
+		for(int i=0;i<n;i++) {
+			sum+=a[i]*inter_cost;
+		}
+		for(int i=0;i<m;i++) {
+			sum+=b[i]*exter_cost;
+		}
+		
+		System.out.printf("Total estimated cost : %.1f INR",sum);
+
+	}
+
+}
+
+output:------------
+Enter the Interior wall painting cost : 
+18
+Enter the Exterior wall painting cost : 
+12
+Enter No. of interior walls :
+6
+Enter No. of Exterior walls :
+3
+12.3
+15.2
+12.3
+15.2
+12.3
+15.2
+10.10
+10.10
+10.100
+Total estimated cost : 1848.6 INR
